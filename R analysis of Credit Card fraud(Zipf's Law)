@@ -1,0 +1,45 @@
+
+R version 4.1.1 (2021-08-10) -- "Kick Things"
+Copyright (C) 2021 The R Foundation for Statistical Computing
+Platform: i386-w64-mingw32/i386 (32-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> library(zipfR)
+> data<-read.spc(file=file.choose())
+> data
+  m  Vm
+1 1 341
+2 2 334
+3 3 371
+4 4 332
+5 5 333
+6 6 324
+7 7 356
+8 8 338
+9 9 346
+
+     N    V
+ 15369 3075
+> summary(data)
+zipfR object for frequency spectrum
+Sample size:     N  = 15369 
+Vocabulary size: V  = 3075 
+Class sizes:     Vm = 341 334 371 332 333 324 356 338 ...
+> plot(data)
+> plot(data, log="x")
+> 
