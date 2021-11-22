@@ -1,0 +1,50 @@
+
+R version 4.1.1 (2021-08-10) -- "Kick Things"
+Copyright (C) 2021 The R Foundation for Statistical Computing
+Platform: i386-w64-mingw32/i386 (32-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> library(zipfR)
+> data<-read.spc(file=file.choose())
+Error in read.spc(file = file.choose()) : 
+  frequency classes 'm' must be integers in .spc file C:\Users\User\Desktop\Book1_Covid.txt
+> data<-read.spc(file=file.choose())
+> data
+  m    Vm
+1 1 92499
+2 2 52889
+3 3 38844
+4 4 29036
+5 5 24122
+6 6 19027
+7 7 16517
+8 8 14370
+9 9 14383
+
+       N      V
+ 1025751 301687
+> summary(data)
+zipfR object for frequency spectrum
+Sample size:     N  = 1025751 
+Vocabulary size: V  = 301687 
+Class sizes:     Vm = 92499 52889 38844 29036 24122 19027 16517 14370 ...
+> Vm(data, 1:9)
+[1] 92499 52889 38844 29036 24122 19027 16517 14370 14383
+> plot(data)
+> plot(data, log="x")
+> 
